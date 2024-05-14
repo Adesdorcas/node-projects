@@ -54,8 +54,6 @@ function updateJokes(req, res) {
 
     };
     res.end(JSON.stringify(db));
-};
-
 
 const server = createServer(requestHandler);
 server.listen(3000, () => {
