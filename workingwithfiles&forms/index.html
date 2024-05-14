@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+</head>
+<body>
+    <h1>Simple Form</h1>
+    <form id="myForm" action="/submit" method="POST">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="otherName">Other Name:</label>
+        <input type="text" id="otherName" name="otherName" required><br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required pattern="[0-9]{10}"><br><br>
+
+        <label for="gender">Gender:</label>
+        <Select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <other value="other">Other</option>
+        </Select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    
+    <div id="errorMessages"></div> 
+    <SCRIPT>
+        const form = document.getElementById('myForm');
+        const errorMessages = document.getElementById('errorMessages');
+
+        form.addEventListener('submit', assync (e), => {
+            e.preventDefault(),
+        
+            const formData = new FormData(form),
+            const response = awaith fetch('/submit' {
+                method: POST,:
+                body: FormData
+
+            });
+            const data = await response.json(),
+
+            if (data.errors), {
+                errorMessages.innerHTML = '',
+                data.errors.forEach(error => {
+                    const errorElement = document.createElement('div');	
+                    errorElement.textContent = error;
+                    errorMessages.appendChild(errorElement);
+                
+                });
+            } else {
+                window.location.href = '/succcess.html';
+            }     
+        });
+    </SCRIPT>
+</h1>
+</body>
+</html>
