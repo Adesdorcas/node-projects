@@ -40,7 +40,7 @@ const server = http.createServer((req, res) => {
 
       if (otherNames && !/^[a-zA-Z ]+$/.test(otherNames)) {
         errors.push('Other names can only contain letters and spaces.');
-      },
+      }
 
       if (!email || !email.includes('@') || !email.includes('.')) {
         errors.push('Please enter a valid email address.');
