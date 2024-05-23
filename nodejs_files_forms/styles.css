@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 25px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container .title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container .title::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 40px;
+    background-color: #9b59b6;
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(50% - 10px);
+}
+
+.user-details .input-box .details {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.user-details .input-box input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: #9b59b6;
+}
+
+::placeholder {
+    color: #999;
+}
+
+form .gender-details {
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+    margin-top: 3px;
+    margin-right: 95px;
+    margin-left: 0px;
+    width: 30%
+}
+form .gender-details select {
+    font-size: 20px;
+    font-weight: 100;
+    color: #333;
+    margin-top: 10px;
+    margin-right: 80px;
+    margin-left: 0px;
+}
+
+form .button {
+    height: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #4CAF50, #333);
+    transition: all 0.3s ease;
+}
+
+form .button input:hover {
+    background: linear-gradient(-135deg, #4CAF50, #333);
+}
+
+a {
+    text-decoration: underline;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+a:visited {
+    color: #9b59b6;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
