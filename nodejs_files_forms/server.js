@@ -52,7 +52,7 @@ const server = http.createServer((req, res) => {
               return;
             }
             res.writeHead(200, { 'Content-Type': 'text/html' });
-            res.end('<html><head><title>Form Submitted</title></head><body><h2>Form submitted successfully!</h2><a href="/">Go back</a></body></html>');
+            res.end('<html><head><title>Form Submitted</title></head><body><h2>Form submitted successfully!</h2><a href="https://node-projects-jgxr.onrender.com/">Go back</a></body></html>');
           });
         });
       }
