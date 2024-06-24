@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms</title>
+    </head>
+    <body>
+    
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form {inert} {
+            opacity: 0.5
+        }
+    </style>
+
+
+    <body>
+        <form inert>
+            <label for="name">Name</label>	
+            <input type="text" required/>
+
+            <button>Change Name</button>
+
+        </form>
+</body>
+</html>
+
+
+<script>
+    const form = document.querySelector("form");
+    const button = document.querySelector("button");
+
+    if (button) {
+        button.addEventListener("click", ( => {
+            form.requestSubmit();
+            console.log("Form has been submitted");
+           }));
+    }
+</script>

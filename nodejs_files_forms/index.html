@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="title">Registration</div>
-        <form action="https://node-projects-jgxr.onrender.com/submit" method="post">
+        <form action="/submit" method="post">
             <div class="user-details">
                 <div class="input-box">
                     <label for="firstName" class="details">First Name</label>
@@ -20,12 +20,12 @@
                     <input id="lastName" type="text" name="lastName" placeholder="Enter last name" required>
                 </div>
                 <div class="input-box">
-                    <label for="otherName" class="details">Other Name</label>
-                    <input id="otherName" type="text" name="otherName" placeholder="Enter other name" required>
+                    <label for="otherNames" class="details">Other Names</label>
+                    <input id="otherNames" type="text" name="otherNames" placeholder="Enter other names">
                 </div>
                 <div class="input-box">
                     <label for="email" class="details">Email</label>
-                    <input id="email" type="email" name="email" placeholder="Enter e-mail" required>
+                    <input id="email" type="email" name="email" placeholder="Enter email" required>
                 </div>
                 <div class="input-box">
                     <label for="phoneNumber" class="details">Phone Number</label>
@@ -38,7 +38,7 @@
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="other">Other</option>
-                    </select><br><br>
+                    </select>
                 </div>
             </div>
             <div class="button">
